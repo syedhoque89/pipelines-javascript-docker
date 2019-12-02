@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: syedhoquepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: syedhoquepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: syedhoquepipelinesjavascriptdocker 
+          image: dockertestcontainerregistry1.azurecr.io/syedhoquepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
